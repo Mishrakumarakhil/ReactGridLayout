@@ -1,0 +1,15 @@
+.grid_column_container{
+    display: grid;
+    gap:20px;
+    
+
+}
+
+.grid_column_layout{
+
+    width: 400px;
+    height: 200px;
+    border:1px solid blue;
+    background-color: blue;
+
+}

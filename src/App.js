@@ -2,9 +2,15 @@ import './App.css';
 import ReactGridLayout from './Components/ReactGridLayout';
 
 function App() {
+
+  let attributeValues={
+    NumberOfColumns:3,
+    NumberOfBoxes:12
+
+  }
   return (
     <div className="App">
-      <ReactGridLayout/>
+      <ReactGridLayout attributeValues={attributeValues}/>
     </div>
   );
 }
