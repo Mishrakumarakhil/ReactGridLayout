@@ -11,5 +11,10 @@
     height: 200px;
     border:1px solid blue;
     background-color: blue;
+    color: white;
 
+}
+.grid_number{
+    padding: 20px;
+    font-weight: 600;
 }
