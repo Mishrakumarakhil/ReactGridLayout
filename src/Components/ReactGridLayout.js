@@ -15,7 +15,7 @@ const  ReactGridLayout=(props)=> {
     <div className='grid_column_container' style={containerStyle}>
         {
          totalGrids.map((ele,index)=>{
-            return <GridBoxContainer id={index+1} key ={index+1} text={numberToWords(index+1)}/>
+            return <GridBoxContainer id={numberToWords(index+1)} key ={index+1} text={numberToWords(index+1)}/>
          })  
         }
     </div>
