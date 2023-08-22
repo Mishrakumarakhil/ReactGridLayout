@@ -5,7 +5,7 @@ function App() {
 
   let attributeValues={
     NumberOfColumns:3,
-    NumberOfBoxes:12
+    NumberOfBoxes:60
 
   }
   return (

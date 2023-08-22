@@ -4,19 +4,22 @@ export const  numberToWords=(number) =>{
     const tens = ['', 'TEN', 'TWENTY', 'THIRTY', 'FORTY', 'FIFTY', 'SIXTY', 'SEVENTY', 'EIGHTY', 'NINETY'];
     const thousands = ['', 'THOUSAND', 'MILLION', 'BILLION'];
   
+
     function convertLessThanThousand(num) {
-      if (num === 0) {
-        return '';
-      } else if (num < 10) {
-        return units[num];
-      } else if (num < 20) {
-        return teens[num - 10];
-      } else if (num < 100) {
-        return tens[Math.floor(num / 10)] + ' ' + units[num % 10];
-      } else {
-        return units[Math.floor(num / 100)] + ' HUNDRED ' + convertLessThanThousand(num % 100);
+        if (num === 0) {
+          return '';
+        } else if (num < 10) {
+          return units[num];
+        } else if (num === 10) { // Special case for "ten"
+          return 'TEN';
+        } else if (num < 20) {
+          return teens[num - 10];
+        } else if (num < 100) {
+          return tens[Math.floor(num / 10)] + ' ' + units[num % 10];
+        } else {
+          return units[Math.floor(num / 100)] + ' HUNDRED ' + convertLessThanThousand(num % 100);
+        }
       }
-    }
   
     function toWords(num) {
       if (num === 0) {
