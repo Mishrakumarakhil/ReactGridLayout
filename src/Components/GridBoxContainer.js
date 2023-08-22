@@ -19,15 +19,19 @@ const  GridBoxContainer=(props)=> {
         };
     
         const observer = new IntersectionObserver(callback, options);
-        if (gridBoxRef.current) {
-          observer.observe(gridBoxRef.current);
+
+        const currentRef = gridBoxRef.current; 
+
+        if (currentRef) {
+          observer.observe(currentRef);
         }
     
         return () => {
-          if (gridBoxRef.current) {
-            observer.unobserve(gridBoxRef.current);
+          if (currentRef) {
+            observer.unobserve(currentRef);
           }
         };
+      
       }, [id]);
   return (
     <div className="grid_column_layout" ref={gridBoxRef}>
