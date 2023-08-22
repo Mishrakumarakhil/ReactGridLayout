@@ -6,7 +6,7 @@ const  GridBoxContainer=(props)=> {
 
     useEffect(() => {
         const options = {
-          threshold: 0.5
+          threshold: 1
         };
     
         const callback = (entries, observer) => {
